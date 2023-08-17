@@ -17,11 +17,11 @@
 									<form>
 										<div class="mb-3">
 											<label class="form-label">Código</label>
-											<input class="form-control form-control-lg" type="email" name="ingUsuario" placeholder="Codigo de Registro" />
+											<input class="form-control form-control-lg" type="" name="ingUsuario" placeholder="Codigo de Registro" require/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Contraseña</label>
-											<input class="form-control form-control-lg" type="password" name="ingPassword" placeholder=" Ingrese su Contraseña" />
+											<input class="form-control form-control-lg" type="password" name="ingPassword" placeholder=" Ingrese su Contraseña"required />
 										</div>
 										<div>
 											<div class="form-check align-items-center">

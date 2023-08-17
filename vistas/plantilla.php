@@ -26,17 +26,17 @@ session_start();
 
 
 <?php 
-// include "modulos/login.php"
-// include "modulos/cabezote.php"
+
   if(isset($_SESSION['iniciarSesion']) && $_SESSION['iniciarSesion']=="ok"){
    
 
-    echo '<body class="hold-transition sidebar-mini">';
+    echo '<body>';
    
     echo '<div class="wrapper">';
-   
-    include "modulos/cabezote.php";
-    // include "modulos/menu.php";
+    //echo '<div><h1>hola<h/h1></div>';
+
+    include "modulos/menu.php";
+    include "modulos/inicio.php";
      
 
     // if(isset($_GET["ruta"])){
@@ -55,18 +55,18 @@ session_start();
 
     //   }else{
 
-    //     //include "modulos/404.php";
+    //     include "modulos/404.php";
 
     //   }
 
     // }else{
 
-    //   //include "../vistas/modulos/inicio.php";
+    //   include "modulos/inicio.php";
 
     // }
 
 
-  //include "modulos/footer.php";
+    include "modulos/footer.php";
 
     echo '</div>';
   
@@ -79,13 +79,15 @@ session_start();
 
     include "modulos/login.php";
 
+
     echo '</body>';  
+    
 } 
 
 ?>  
 <!--scripts DE MI PROYECTO --> 
-<script src="js/app.js"></script>
-<script src="dist/js/plantilla.js"></script>
+<script src="/vistas/dist/js/app.js"></script>
+<script src="/vistas/dist/js/plantilla.js"></script>
 
 
 
