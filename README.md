@@ -6,5 +6,5 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/PitterQuenallata/ejervc.git
+git remote add origin https://github.com/PitterQuenallata/Proyecto-de-Grado-Ensec.git
 git push -u origin main
