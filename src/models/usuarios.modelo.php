@@ -11,7 +11,7 @@ class ModeloUsuarios{
 	static public function mdlMostrarUsuarios($tabla, $item, $valor){
 
 		if($item != null){
-
+                                                 //SELECT * FROM usuarios WHERE usuario='admin';
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
@@ -30,7 +30,6 @@ class ModeloUsuarios{
 
 		}
 		
-
 		$stmt -> close();
 
 		$stmt = null;

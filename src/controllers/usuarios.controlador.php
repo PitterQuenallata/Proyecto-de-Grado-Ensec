@@ -16,7 +16,6 @@ class ControladorUsuarios{
 			   	$encriptar = crypt($_POST["ingPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 				$tabla = "usuarios";
-
 				$item = "usuario";
 				$valor = $_POST["ingUsuario"];
 
@@ -53,7 +52,6 @@ class ControladorUsuarios{
 						$ultimoLogin = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
 
 						if($ultimoLogin == "ok"){
-                           
 
 							echo '<script>
 
@@ -87,8 +85,6 @@ class ControladorUsuarios{
 	=============================================*/
 
 	static public function ctrCrearUsuario(){
-
-
 
 		if(isset($_POST["nuevoUsuario"])){
 
@@ -173,14 +169,8 @@ class ControladorUsuarios{
 					           "perfil" => $_POST["nuevoPerfil"],
 					           "foto"=>$ruta);
 
-				
-
 				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
 			
-
-
-
-
 				if($respuesta == "ok"){
 
 					echo '<script>
@@ -259,7 +249,6 @@ class ControladorUsuarios{
 	=============================================*/
 
 	static public function ctrEditarUsuario(){
-
 
 		if(isset($_POST["editarUsuario"])){
 
@@ -386,6 +375,7 @@ class ControladorUsuarios{
 							   "password" => $encriptar,
 							   "perfil" => $_POST["editarPerfil"],
 							   "foto" => $ruta);
+                
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
 
@@ -458,22 +448,23 @@ class ControladorUsuarios{
 
 			if($respuesta == "ok"){
 
-            echo'<script>
-				Swal.fire({
+				echo'<script>
+
+				swal({
+					  type: "success",
 					  title: "El usuario ha sido borrado correctamente",
-					  icon: "success",
 					  showConfirmButton: true,
-					 
-					  confirmButtonColor: "#3085d6",
-
 					  confirmButtonText: "Cerrar"
-					}).then((result) => {
-		                     window.location = "usuarios";
-					})
-                
-            </script>';
+					  }).then(function(result){
+								if (result.value) {
 
- 
+								window.location = "usuarios";
+
+								}
+							})
+
+				</script>';
+
 			}		
 
 		}
@@ -482,6 +473,3 @@ class ControladorUsuarios{
 
 
 }
-	
-
-
