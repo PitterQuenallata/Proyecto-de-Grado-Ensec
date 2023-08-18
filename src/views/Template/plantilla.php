@@ -1,93 +1,57 @@
 <?php
 
-session_start();
+//session_start();
 
 ?>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
-	<meta name="author" content="AdminKit">
-	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ela Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
 
-	<title>Sign In | AdminKit Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
-	<link href="vistas/dist/css/app.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-
-
+  </head>
 <?php 
 
-  if(isset($_SESSION['iniciarSesion']) && $_SESSION['iniciarSesion']=="ok"){
-   
-
-    echo '<body>';
-   
-    echo '<div class="wrapper">';
-    //echo '<div><h1>hola<h/h1></div>';
-
-    include "modulos/menu.php";
-    include "modulos/inicio.php";
-     
-
-    // if(isset($_GET["ruta"])){
-
-    //   if($_GET["ruta"] == "inicio" ||
-    //      $_GET["ruta"] == "usuarios" ||
-    //      $_GET["ruta"] == "categorias" ||
-    //      $_GET["ruta"] == "productos" ||
-    //      $_GET["ruta"] == "clientes" ||
-    //      $_GET["ruta"] == "ventas" ||
-    //      $_GET["ruta"] == "crear-venta" ||
-    //      $_GET["ruta"] == "reportes" ||
-    //      $_GET["ruta"] == "salir"){
-
-    //     include "modulos/".$_GET["ruta"].".php";
-
-    //   }else{
-
-    //     include "modulos/404.php";
-
-    //   }
-
-    // }else{
-
-    //   include "modulos/inicio.php";
-
-    // }
+  echo '<body>';
 
 
-    include "modulos/footer.php";
 
-    echo '</div>';
-  
-    echo '</body>';
+
+
+  echo '</body>';
     
 
-  }else{
 
-    echo '<body class="hold-transition login-page">';
-
-    include "modulos/login.php";
-
-
-    echo '</body>';  
     
-} 
+
 
 ?>  
 <!--scripts DE MI PROYECTO --> 
-<script src="/vistas/dist/js/app.js"></script>
-<script src="/vistas/dist/js/plantilla.js"></script>
+
 
 
 
